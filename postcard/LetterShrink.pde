@@ -4,7 +4,7 @@ class LetterShrink extends Letter {
 
   LetterShrink(char c) {
     super(c);
-    textStartSize = int(random(40, 100));
+    textStartSize = int(random(40, 80));
     textShrinkSpeed = 0.3;
   }
 
@@ -12,11 +12,9 @@ class LetterShrink extends Letter {
     
     textStartSize = textStartSize + textShrinkSpeed;
     
-    if (textStartSize < 30 || textStartSize > 80) {
+    if (textStartSize < 40 || textStartSize > 80) {
       textShrinkSpeed = textShrinkSpeed * -1;
     }
-      
-
 
     fill(textColor);
     textSize(textStartSize);

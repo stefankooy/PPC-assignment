@@ -25,9 +25,9 @@ class Text {
 
     for (int i = 0; i < text.length(); i++) {
       float r = random(0, 1);
-      if (r > 0 && r < 0.33) {
+      if (r >= 0 && r < 0.3333) {
         sentence[i] = new LetterBob(text.charAt(i));
-      } else if (r > 0.33 && r < 0.66) {
+      } else if (r > 0.3333 && r < 0.6667) {
         sentence[i] = new LetterShrink(text.charAt(i));
       } else {
         sentence[i] = new LetterRotate(text.charAt(i));

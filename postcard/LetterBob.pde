@@ -14,7 +14,7 @@ class LetterBob extends Letter {
     ypos = ypos + direction;
 
     //change direction so letters bob up and down
-    if (ypos > 130 || ypos < 120) {
+    if (ypos > 135 || ypos < 125) {
       direction = direction * -1;
     }
 
