@@ -1,3 +1,4 @@
+//Class LetterBob
 class LetterBob extends Letter {
   float bobYpos;
   float direction;
@@ -6,16 +7,21 @@ class LetterBob extends Letter {
     super(c);
     bobYpos = randomPos();
     direction = 0.3;
+    ypos = ypos + bobYpos;
   }
 
   void display(float xpos) {
-    text(c2, xpos, ypos + bobYpos);
     ypos = ypos + direction;
-    
+
     //change direction so letters bob up and down
-    if (ypos > 6 || ypos < -6) {
+    if (ypos > 130 || ypos < 120) {
       direction = direction * -1;
     }
+
+    fill(textColor);
+    textSize(textSize);
+
+    text(c2, xpos, ypos);
   }
 
   int randomPos() {

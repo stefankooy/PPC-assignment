@@ -19,13 +19,19 @@ class Text {
     text = join(input, " ");
 
     sentence = new Letter[text.length()];
-    
-    //randomIndex = random(0, text.length());
-    
+
+    //randomIndex = new int[(int)random(0, text.length())];
+    //int rand = (int)random(randomIndex.length);
+
     for (int i = 0; i < text.length(); i++) {
-      sentence[i] = new Letter(text.charAt(i));
-      sentence[i] = new Letter(text.charAt(i));
-      sentence[i] = new Letter(text.charAt(i));
+      float r = random(0, 1);
+      if (r > 0 && r < 0.33) {
+        sentence[i] = new LetterBob(text.charAt(i));
+      } else if (r > 0.33 && r < 0.66) {
+        sentence[i] = new LetterShrink(text.charAt(i));
+      } else {
+        sentence[i] = new LetterRotate(text.charAt(i));
+      }
     }
 
     //println(PFont.list());
@@ -43,8 +49,6 @@ class Text {
     }
 
     letterXpos = 40;
-
-    letterXpos = 40;
-    scale(1, 0.5);
+    scale(1, 0.5);  
   }
 }

@@ -9,7 +9,7 @@ class Letter {
 
   Letter(char c) {
     c2 = c;
-    textSize = int (random(60, 100));
+    textSize = int(random(60, 100));
     textColor = changeColor();
     ypos = 130;
   }
@@ -17,7 +17,7 @@ class Letter {
   void display(float xpos) {
     fill(textColor);
     textSize(textSize);
-    
+ 
     text(c2, xpos, ypos);
   }
 
