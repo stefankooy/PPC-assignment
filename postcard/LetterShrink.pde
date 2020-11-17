@@ -5,7 +5,7 @@ class LetterShrink extends Letter {
   LetterShrink(char c) {
     super(c);
     textStartSize = int(random(40, 100));
-    textShrinkSpeed = 1;
+    textShrinkSpeed = 0.3;
   }
 
   void display(float xpos) {
@@ -13,7 +13,7 @@ class LetterShrink extends Letter {
     textStartSize = textStartSize + textShrinkSpeed;
     
     if (textStartSize < 30 || textStartSize > 80) {
-      textShrinkSpeed = textShrinkSpeed * -1;;
+      textShrinkSpeed = textShrinkSpeed * -1;
     }
       
 
