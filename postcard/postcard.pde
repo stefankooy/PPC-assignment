@@ -9,10 +9,12 @@
 
 Text text;
 Balloons balloons;
+Background background;
 Confetti[] confettis = new Confetti[500];
 
 void setup() {
   size(1120, 700);
+  background = new Background();
   text = new Text();
 
   for (int i = 0; i < confettis.length; i++) {
@@ -22,7 +24,7 @@ void setup() {
 }
 
 void draw() {
-  background(255, 255, 220);
+  background.display();
 
   //display confetti
   for (int i = 0; i<confettis.length; i++) {
