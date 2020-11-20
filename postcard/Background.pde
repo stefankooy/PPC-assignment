@@ -1,23 +1,26 @@
 //this class displays our background, which is a gradient.
 
-class Background {
+PImage wallpaper;
+color c;
+float x;
+float y;
 
+class Background {
   Background() {
     loadPixels();      //get access to the pixels
+    wallpaper = loadImage("wallpaper.jpg");
+    
   }
 
   void display() {
-
-    //loop through each pixel on the screen
-    for (int i=0; i < pixels.length; i++) {
-
-      //creates a color behaviour of each pixel in regards to the distance of the mouse
-      color c  = color(255, 255, (255-100*dist(mouseX, mouseY, i%width, i/width)/width));
-
-      //assigns color to the pixels
-      pixels[i]=c;
-    };
-
-    updatePixels();      //updating the new colors of each pixel
+    
+    for (int i = 0; i < 100; i++) {
+      x = mouseX;
+      y = mouseY;
+      c = wallpaper.get(int(x), int(y));
+      fill(c, 10);
+      noStroke();
+      ellipse(x, y, 200, 200);
+    }
   }
 }

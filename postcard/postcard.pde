@@ -16,14 +16,16 @@ void setup() {
   size(1120, 700);
   background = new Background();
   text = new Text();
+  balloons = new Balloons();
+  frameRate(15000);
 
   for (int i = 0; i < confettis.length; i++) {
     confettis[i] = new Confetti(random(0, width), random(1, 2), random(50, 255), random(20, 220), random(20, 220));
   }
-  balloons = new Balloons();
 }
 
 void draw() {
+  background(255, 255, 220);
   background.display();
 
   //display confetti
