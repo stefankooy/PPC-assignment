@@ -10,17 +10,24 @@ class Balloons {
     balloonsLeft = loadImage("balloonsLeft.png");
     balloonsRight = loadImage("balloonsRight.png");
     
+    //balloon positions
     balloonRX = 1200;
-    balloonRY = 500;
+    balloonRY = 520;
     balloonLX = 200;
-    balloonLY = 550;
+    balloonLY = 520;
   }
 
   void display() {
+    //scale the balloons down
     scale(0.6, 0.6);
-    tint(255, 126);
+    
+    //change opacity of the balloons slightly
+    tint(255, 200);
+    
+    //display the images
     image(balloonsLeft, balloonLX, balloonLY);
     image(balloonsRight, balloonRX, balloonRY);
+    
     scale(1.67, 1.67);
   }
 }

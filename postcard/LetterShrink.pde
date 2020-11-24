@@ -1,3 +1,5 @@
+//Class LetterShrink. Child class of class Letter. Makes a third of the letters shrink and grow.
+
 class LetterShrink extends Letter {
 
   float textStartSize, textShrinkSpeed;

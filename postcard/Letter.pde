@@ -1,4 +1,4 @@
-//The letter class is a class for each seperate character. gives each character a random starting position, and makes them bob up and down. Assigns a random color to each character.
+//The letter class is a class for each seperate character. gives each character a random starting position and assigns a random color to each character.
 
 class Letter {
   color textColor;

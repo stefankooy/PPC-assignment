@@ -1,3 +1,5 @@
+//Class LetterRotate. Child class of class Letter. Makes a third of the letters rotate.
+
 class LetterRotate extends Letter {
 
   float angle;

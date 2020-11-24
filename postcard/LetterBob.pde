@@ -1,4 +1,5 @@
-//Class LetterBob
+//Class LetterBob. Child class of class Letter. Makes a third of the letters bob up and down.
+
 class LetterBob extends Letter {
   float bobYpos;
   float direction;

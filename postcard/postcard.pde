@@ -17,8 +17,8 @@ void setup() {
   background = new Background();
   text = new Text();
   balloons = new Balloons();
-  frameRate(15000);
 
+  //create confettis with random position, random speed, and a random r, g, and b value. 
   for (int i = 0; i < confettis.length; i++) {
     confettis[i] = new Confetti(random(0, width), random(1, 2), random(50, 255), random(20, 220), random(20, 220));
   }
@@ -33,7 +33,9 @@ void draw() {
     confettis[i].display();
   }
 
-  //display balloon images and text
-  balloons.display();            
+  //display balloon images
+  balloons.display(); 
+  
+  //display the moving text
   text.display();
 }

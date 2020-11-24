@@ -9,7 +9,8 @@ class Confetti {
     y = random(-4000);
     speed = speedC;
     gravity = random(1, 4); 
-    //randomised coloured confetti particles
+    
+    //randomised colors in confetti particles
     colorC = color(r, g, b);     
   }
 
